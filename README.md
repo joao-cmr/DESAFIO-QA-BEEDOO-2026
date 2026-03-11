@@ -28,9 +28,9 @@ Verificação Técnica: Inspeção de requisições HTTP e persistência em Loca
 
 | ID | Cenário | Objetivo | Status |
 | :--- | :--- | :--- | :--- |
-| **CT-001** | Cadastrar novo curso | Validar fluxo principal de cadastro. | [❌ Falhou](evidências-BUG001) |
-| **CT-002** | Excluir curso selecionado | Validar remoção de registro da lista e do banco. | [❌ Falhou](evidências-BUG002) |
-| **CT-003** | Validação de regra cronológica | Impedir data de término anterior à data de início. | [❌ Falhou](evidências-BUG003) |
-| **CT-004** | Validação de campos obrigatórios | Impedir cadastro de formulário vazio. | [❌ Falhou](evidências-BUG004) |
-| **CT-005** | Integridade de dados (Vagas) | Impedir números negativos ou decimais em vagas. | [❌ Falhou](evidências-BUG005) |
+| **CT-001** | Cadastrar novo curso | Validar fluxo principal de cadastro. | [❌ Falhou](evidências-BUG001/) |
+| **CT-002** | Excluir curso selecionado | Validar remoção de registro da lista e do banco. | [❌ Falhou](evidências-BUG002/) |
+| **CT-003** | Validação de regra cronológica | Impedir data de término anterior à data de início. | [❌ Falhou](evidências-BUG003/) |
+| **CT-004** | Validação de campos obrigatórios | Impedir cadastro de formulário vazio. | [❌ Falhou](evidências-BUG004/) |
+| **CT-005** | Integridade de dados (Vagas) | Impedir números negativos ou decimais em vagas. | [❌ Falhou](evidências-BUG005/) |
 

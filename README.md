@@ -28,7 +28,7 @@ Verificação Técnica: Inspeção de requisições HTTP e persistência em Loca
 
 | ID | Cenário | Objetivo | Status |
 | :--- | :--- | :--- | :--- |
-| **CT-001** | Cadastrar novo curso | Validar fluxo principal de cadastro. | ❌ Falhou |
+| **CT-001** | Cadastrar novo curso | Validar fluxo principal de cadastro. | ❌ Falhou | (./evidencias-BUG001)
 | **CT-002** | Excluir curso selecionado | Validar remoção de registro da lista e do banco. | ❌ Falhou |
 | **CT-003** | Validação de regra cronológica | Impedir data de término anterior à data de início. | ❌ Falhou |
 | **CT-004** | Validação de campos obrigatórios | Impedir cadastro de formulário vazio. | ❌ Falhou |

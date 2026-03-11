@@ -65,11 +65,9 @@ Identifiquei que o sistema não possui validações de entrada no Front-end para
 Classifiquei os bugs de **Exclusão** e **Falta de Validação** com prioridade **ALTA**, pois impedem o gerenciamento básico dos dados (CRUD) e comprometem a confiabilidade da base de dados.
 
 ---
-**candidato pronto para ser aBEEDOOzido**
+**Candidato pronto para ser aBEEDOOzido**
 ---
 
 ## Contato
 **João Carlos Moreira Rodrigues** 
-[LinkedIn](https://www.linkedin.com/in/joaocmr)  
-[GitHub](https://github.com/joao-cmr)  
-📧 contatojoaocmr@gmail.com
+[LinkedIn](https://www.linkedin.com/in/joaocmr)  [GitHub](https://github.com/joao-cmr)  contatojoaocmr@gmail.com

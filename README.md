@@ -8,9 +8,9 @@ Este repositório contém a documentação dos testes realizados na aplicação 
 
 **Navegador:** https://www.google.com/chrome/ 
 
-**Ferramentas de Inspeção:** Chrome DevTools (Console, Network, Application/LocalStorage)
-
 **Documentação:** https://docs.google.com/spreadsheets/d/1m6cJc-gJsyxEqW_lx8piJSCGa4WqfpMLVR0VJ67-5oI/edit?gid=22151257#gid=22151257
+
+**Ferramentas de Inspeção:** Chrome DevTools (Console, Network, Application/LocalStorage)
 
 
 

@@ -70,4 +70,4 @@ Classifiquei os bugs de **Exclusão** e **Falta de Validação** com prioridade 
 
 ## Contato
 **João Carlos Moreira Rodrigues** 
-[LinkedIn](https://www.linkedin.com/in/joaocmr)  [GitHub](https://github.com/joao-cmr)  contatojoaocmr@gmail.com
+[LinkedIn](https://www.linkedin.com/in/joaocmr) |  [GitHub](https://github.com/joao-cmr)  |  contatojoaocmr@gmail.com

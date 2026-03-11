@@ -32,3 +32,49 @@ Verificação Técnica: Inspeção de requisições HTTP e persistência em Loca
 | **CT-003** | Validação de regra cronológica | Impedir data de término anterior à data de início. | [❌ Falhou](evidencias-BUG003) |
 | **CT-004** | Validação de campos obrigatórios | Impedir cadastro de formulário vazio. | [❌ Falhou](evidencias-BUG004) |
 | **CT-005** | Integridade de dados (Vagas) | Impedir números negativos ou decimais em vagas. | [❌ Falhou](evidencias-BUG005) |
+
+
+-----
+
+## Relatório de Bugs Encontrados
+Durante a execução, foram identificados 5 defeitos críticos que impactam a experiência do usuário e a integridade do sistema.
+
+**Destaques Técnicos:**
+
+BUG-002 (Erro 405): Identificada tentativa de deleção em endpoint estático (/courses/1) com método HTTP não permitido, indicando código chumbado.
+
+BUG-003/005 (Tipagem): Detectado que campos numéricos e de data estão sendo tratados como Strings no LocalStorage, o que impossibilita validações lógicas automáticas.
+
+BUG-004 (UX/Validação): Ausência total de validação de formulário no Front-end, permitindo registros vazios.
+
+Nota: O detalhamento completo de cada bug (Passos para reproduzir, Resultado Atual vs Esperado e Evidências) está disponível na documentação técnica anexada.
+
+-----
+
+
+## Análise e Tomada de Decisão (Etapa 2)
+
+**1. Metodologia de Investigação**
+
+Durante o ciclo de testes, utilizei o Chrome DevTools para realizar a solução das falhas encontradas. O objetivo foi realizar uma análise de causa raiz, distinguindo erros de renderização no Front-end de falhas estruturais de comunicação e persistência.
+
+2. Investigação do BUG-002 (Falha na Exclusão)
+Ao validar o cenário de exclusão (CT-002), identifiquei que a operação não era persistida. Através da aba Network, constatei dois problemas críticos:
+
+Erro de Método: A aplicação dispara uma requisição com o método HTTP DELETE, porém o servidor retorna o status 405 (Method Not Allowed).
+
+Parâmetro Estático (Hardcoded): A URL da requisição utiliza um **ID estático (/courses/1)** independentemente do curso selecionado, impedindo a exclusão de outros registros.
+
+Nota Técnica: A ausência de uma documentação de API (como Swagger ou OpenAPI) impossibilitou a validação do contrato esperado para confirmar se o erro 405 é uma falha de configuração do endpoint ou uma limitação da infraestrutura de teste.
+
+3. Vulnerabilidades e Integridade de Dados
+Identifiquei que o sistema não possui validações de entrada no Front-end para campos obrigatórios, datas ou valores numéricos.
+
+Risco: A falta de tipagem (todos os dados são salvos como String no LocalStorage) representa um risco à integridade dos dados, permitindo valores negativos ou datas inconsistentes que podem causar quebras de layout e falhas em futuras funcionalidades de filtros ou relatórios.
+
+4. Priorização de Correções
+Classifiquei os bugs de Exclusão e Falta de Validação com prioridade ALTA:
+
+Exclusão: Impede o gerenciamento básico do ciclo de vida dos dados (CRUD).
+
+Validação: Compromete a confiabilidade da base de dados e a usabilidade do sistema.
